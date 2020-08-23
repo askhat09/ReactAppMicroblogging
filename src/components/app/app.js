@@ -8,6 +8,13 @@ import PostList from "../post-list/post-list";
 import "./app.css";
 
 const App = () => {
+
+  const data = [
+    {label: "Обучение по React", important: true, id: "onew"},
+    {label: "Статьи по выбору техники", important: false, id: "twofd"},
+    {label: "PlayStation 5 - скоро в продаже!", important: false, id: "threefd"}
+  ]
+
   return (
     <div className="app">
       <AppHeader />
@@ -15,10 +22,10 @@ const App = () => {
         <SearchPanel />
         <PostStatusFilter />
       </div>
-      <PostList />
+      <PostList posts={data}/>
       <PostAddForm />
     </div>
-  );
-};
+  )
+}
 
 export default App;
